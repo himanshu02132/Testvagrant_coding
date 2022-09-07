@@ -1,0 +1,67 @@
+#include<iostream.h>
+using namespace std;
+class prod{
+		string product;
+		double unit_price;
+		double GST;
+		int Quantity;
+		float m_gst;
+
+    public:
+    	void get_details();
+    	{
+    		cout<<"Enter the product name:"<<endl;
+    		cin>>product;
+    		
+    		cout<<"Enter the unit price of product:"<<endl;
+    		cin>>unit_price;
+    		cout<<"Enter the GST of the product:"<<endl;
+    		cin>>GST;
+    		cout<<"Enter the quantity of product:"<<endl;
+    		cin>>Quantity;
+    		
+		}
+		void calculate();
+		{
+			float x,amount;
+		
+
+			
+		x=unit_price*Quantity
+		amount=x+((x*GST)/100;
+		
+		}
+		void max_gst()
+		{
+			float y;
+			y=unit_price*Quantity;
+			m_gst=(y*GST)/100;
+			
+		}
+	
+};
+int main()
+{
+	prod p;
+     float total_amount=0;
+     int arr[4];
+	for(int i=0;i<4;i++)
+	{
+		p.get_details();
+		p.calculate();
+		total_amount=total_amount+amount;
+	}
+	cout<<"The total amount to be paid to the shopkeeper is : "<<total_amount;
+	for(int j=0;j<4;j++)
+	{
+		p.max_gst();
+		arr[j]=m_gst;
+	}
+	for(int k=1;k<4;k++)
+	{
+		if(arr[0]<arr[k])
+		arr[0]=arr[k];
+	}
+	cout<<"The maximum GST is to be paid is :  "<<arr[0];
+return 0;	
+}
